@@ -1,5 +1,29 @@
+/*-- Parental hierachy styling --*/
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+
+
 .suspects {
     position: absolute;
     width: 300px;
     height: 400px;
+}
+
+/*-- Styling button 1 to reveal clue 1 within the clues page --*/
+#button-1 {
+    color: violet;
+}
+
+#button-2 {
+    background-color: aquamarine;
+}
+
+#button-3 {
+    background-color: blueviolet;
 }
