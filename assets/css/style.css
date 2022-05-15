@@ -27,3 +27,21 @@ h1 {
 #button-3 {
     background-color: blueviolet;
 }
+
+/*-- For mouse enter and mouse leave jQuery function and container for clue box --*/
+#container {
+    display: flex;  /* To make our container a flex box */
+    flex-flow: row wrap;    /* Layout the rows and wrap them */
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1050px; 
+}
+
+.makeRed {
+    background-color: red;
+}
+
+.makeBlue {
+    background-color: blueviolet;
+}

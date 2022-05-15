@@ -24,3 +24,26 @@ $("#button-1").click(function(){
     opacity, '0.3').fadeOut("slow").hide("slow")
 });
 
+// Changing the color of button-1 in CLUES
+function changeColor(newColor) {
+  var elem = document.getElementById('button-1');
+  elem.style.color = newColor;
+}
+
+// Method chaining jQuery paragraph hiding
+$("")
+
+$('#clue-1')mouseenter(function () {
+  $(this).removeClass('makeRed').addClass('makeBlue');
+});
+
+$('#clue-1')mouseleave(function () {
+  $(this).removeClass('makeBlue').addClass('makeRed');
+});
+
+/*
+*  js audio-player random synths - dan project
+*  need clear on off button for players
+*/
+
+
