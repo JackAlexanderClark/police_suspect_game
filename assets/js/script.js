@@ -1,19 +1,21 @@
-//One single guess of suspect allowed
-const randomNumber = Math.floor(Math.random() * 100) + 1
-console.log('Random Number', randomNumber)
-
+//Defining the constant true suspect
+const correctSuspect = suspect8;
 // One guess gameloop
+document.getElementById("guessChoice").onclick = checkGuess;
+
 function checkGuess() {
-  let myGuess = guess.value;
-  if (myGuess === randomNumber) {
-    feedback.textContent = "You got it right!"
-  } else if (myGuess > randomNumber) {
-    feedback.textContent = "Your guess was " + myGuess + ". That's too high. Try Again!"
-  } else if (myGuess < randomNumber) {
-   feedback.textContent = "Your guess was " + myGuess + ". That's too low. Try Again!"
- }
-}
-submitGuess.addEventListener('click', checkGuess)
+  let playerGuess = guess.value;
+  if (playerGuess === suspect8) {
+    feedback.textContent = "You got it right! Suspect 8 was the criminal who killed your family!";
+  } else if (myGuess != correctSuspect) {
+    feedback.textContent = "Your guess was" + playerGuess + ". That's incorrect, you selected an inoccent man. Try Again!"
+};
+
+//Incrementing wrong answer score
+let wrongAnswer = myGuess != correctSuspect;
+document.getElementsByClassName("wrongAnswerBox").addClass("incrementWrongScore");
+
+submitGuess.addEventListener('click', checkGuess);
 
 // jQuery button for animating clue 01
 $("#button-1").click(function(){
@@ -31,8 +33,11 @@ function changeColor(newColor) {
 }
 
 // Method chaining jQuery paragraph hiding
-$("")
+$("#paragraph-1").click(function () {
+  $(this).(#button).hide(2500).show(1000)
+});
 
+// Mouse enter and leave jQuery
 $('#clue-1')mouseenter(function () {
   $(this).removeClass('makeRed').addClass('makeBlue');
 });
@@ -45,5 +50,3 @@ $('#clue-1')mouseleave(function () {
 *  js audio-player random synths - dan project
 *  need clear on off button for players
 */
-
-
