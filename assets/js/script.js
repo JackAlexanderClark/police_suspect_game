@@ -1,14 +1,16 @@
 //Defining the constant true suspect
 const correctSuspect = suspect8;
 // One guess gameloop
-document.getElementById("guessChoice").onclick = checkGuess;
+document.getElementById("guessChoice").onclick = checkGuess();
 
 function checkGuess() {
   let playerGuess = guess.value;
   if (playerGuess === suspect8) {
     feedback.textContent = "You got it right! Suspect 8 was the criminal who killed your family!";
+    console.log("CORRECT ANSWER");
   } else if (myGuess != correctSuspect) {
     feedback.textContent = "Your guess was" + playerGuess + ". That's incorrect, you selected an inoccent man. Try Again!"
+    console.log("INCORRECT ANSWER");
 };
 
 //Incrementing wrong answer score
