@@ -1,3 +1,8 @@
+//Getting jQuery ready for when the page has fully loaded so can correctly manipulate elements as intended
+$(document).ready(function(){
+  console.log("Document fully loaded - jQuery is ready");
+});
+
 //Defining the constant true suspect
 const correctSuspect = suspect8;
 let attempts = 0;
