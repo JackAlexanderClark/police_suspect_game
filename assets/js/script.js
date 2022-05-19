@@ -75,31 +75,34 @@ $('#clue-1')mouseleave(function () {
 /**
  *  jQuery function to bring an interactive pop-up summary detaling the crime events
  */
+ function deselect(e) {
+  $('.pop').slideFadeToggle(function() {
+    e.removeClass('selected');
+  });    
+}
 
-$(".contact-btn").click(function () {
-	$(this).addClass("clicked");
+$(function() {
+  $('#contact').on('click', function() {
+    if($(this).hasClass('selected')) {
+      deselect($(this));               
+    } else {
+      $(this).addClass('selected');
+      $('.pop').slideFadeToggle();
+    }
+    return false;
+  });
+
+  $('.close').on('click', function() {
+    deselect($('#contact'));
+    return false;
+  });
 });
 
-$(".close").click(function (e) {
-	$(".clicked").removeClass("clicked");
-	e.stopPropagation();
-	$(".send-clicked").removeClass("send-clicked");
-	e.stopPropagation();
-});
+$.fn.slideFadeToggle = function(easing, callback) {
+  return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
+};
 
-$(".send-btn").click(function () {
-	$(this).addClass("send-clicked");
-	setTimeout(function () {
-		$(".clicked").removeClass("clicked");
 
-		$(".send-clicked").removeClass("send-clicked");
-	}, 5000);
-});
-
-$(".msg-close").click(function (e) {
-	$(".send-clicked").removeClass("send-clicked");
-	e.stopPropagation();
-});
 
 
 /*

@@ -40,36 +40,27 @@
         </div>
     </section>
 
-    <!-- AMAZING INTERACTIVE BUTTON IDEA TO BRING UP CRIME https://codepen.io/kucznierzm/pen/KKaypgd -->
+    <!-- AMAZING INTERACTIVE BUTTON IDEA TO BRING UP CRIME REPORT https://stackoverflow.com/questions/1328723/how-to-generate-a-simple-popup-using-jquery -->
     <section>
-        <div class="contact-btn">
-            <span class="cta">Contact </span>
-            <div class="close ion-close-round"></div>
-        
-            <div class="fake-input">
-                <h3>OFFICIAL POLICE REPORT</h3>
+        <a href="/contact" id="contact">Contact Us</a>
+
+        <div class="messagepop pop">
+            <form method="post" id="new_message" action="/messages">
+              <p><label for="email">Your email or name</label><input type="text" size="30" name="email" id="email" /></p>
+              <p><label for="body"><h3>OFFICIAL POLICE REPORT</h3>
                 <ul>
-                    <li><strong>DATE:</strong>21st of March 2022</li>
-                    <li><strong>TIME:</strong>1:06am</li>
-                    <li><strong></strong>21st of March 2022</li>
-                    <li><strong>DATE:</strong>21st of March 2022</li>
-                    <li><strong>DATE:</strong>21st of March 2022</li>
-                </ul>
-            </div>
+                    <li><strong>Date:</strong>21st of March 2022</li>
+                    <li><strong>Time:</strong>1:06am</li>
+                    <li><strong>Description of incident:</strong>ARSON expand upon</li>
+                    <li><strong>Where did the incident occur:</strong>Made up address at doesn't exist street</li>
+                </ul></label><textarea rows="6" name="body" id="body" cols="35"></textarea></p>
+              <p><input type="submit" value="Send Message" name="commit" id="message_submit"/> or <a class="close" href="/">Cancel</a></p>
+            </form>
+          </div>
         
-            <div class="send-btn">
-                <span class="snd">Send </span>
-        
-                <div class="msg">
-                    <div class="msg-close ion-close-round"></div>
-                    Thank you for your feedback. We will contact you soon.
-                    This Dialog will close in 5 Seconds
-                </div>
-            </div>
-        </div>
     </section>
     
-
+    <!-- Police line-up of the potential suspects with their individual IDs -->
     <section>
         <div class="suspects_img">
             <h2>MR. EVIL</h2>
@@ -116,8 +107,8 @@
                 </li>
                 <li>
                     Biography: Nigel has not had an easy life. He came from a broken home where his father suffered from alcoholism and was inattentive to Nigel as a child – paired with his six other siblings, there simply wasn’t enough love to go around. His misbehaviour at a young age caused him to be excluded from school – which drastically reduced his prospects in later life. 
-Nigel has a good and true soul at heart but has been unfairly treated in life and his worsening money issues led him to eventual homelessness. 
-Nigel was seen on CCTV loitering outside a Tesco Express down the road from your house at 9:20pm and was seen wearing black hoodie and cargo trousers. 
+                    Nigel has a good and true soul at heart but has been unfairly treated in life and his worsening money issues led him to eventual homelessness. 
+                    Nigel was seen on CCTV loitering outside a Tesco Express down the road from your house at 9:20pm and was seen wearing black hoodie and cargo trousers. 
                 </li>
             </ul>
         </div>
