@@ -1,6 +1,8 @@
 # Milestone Project 2 - Interactive Frontend Application
 
-## Police Suspect Game
+## Police Suspect Game by Jack Clark
+
+## NOTE: Please load the application and complete the game before reading too much of the development processes as they may spoil/reveal the answers!
 
 ### The Premise
 ##### The premise is similar to that of cluedo.
