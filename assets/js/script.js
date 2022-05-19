@@ -72,6 +72,7 @@ $('#clue-1')mouseleave(function () {
   $(this).removeClass('makeBlue').addClass('makeRed');
 });
 
+
 /**
  *  jQuery function to bring an interactive pop-up summary detaling the crime events
  */

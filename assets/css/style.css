@@ -57,9 +57,8 @@ span {
     background-color: blueviolet;
 }
 
-/*-- Making INTERACTIVE POP UP BUTTON detailing the crime to remind the player the EVENTS  --*/
-
-First the CSS - tweak this however you like:
+/*-- Making INTERACTIVE POP UP BUTTON detailing the crime to remind the player the EVENTS. First the CSS - tweak this however you like:
+ --*/
 
 a.selected {
   background-color:#1F75CC;
