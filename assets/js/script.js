@@ -26,6 +26,8 @@ function checkGuess() {
 //Resets the game attempts to 3
 function restartGame() {
   attempts = 3;
+  //NEED TO CHANGE INNER HTML BOX TO KEEP TRACK OF THE GAME ATTEMPTS - RESEARCH
+  gameAttempts.innerHTML = '3';
   feedback.textContent = "Game reset you have 3 more guesses to identify the suspect";
 }
 

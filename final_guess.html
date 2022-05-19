@@ -29,9 +29,23 @@
             </li>
         </ul>
         </nav> 
+    <!-- Multiple dropdown selection button that calls the checkGuess function once a player has made a decision-->
     <section>
-        <h1>Make Your Guess on which Suspect is Guilty</h1>
-        <input id="guessChoice" type="button" value="Click Here For Your final Guess" onclick="checkGuess();"/>
+        <h2>Make Your Guess on which Suspect is Guilty</h2>
+        <p>The multiple attribute specifies that multiple options can be selected at once:</p>
+            <form action="/action_page.php">
+                <label for="suspects">Choose a Suspect:</label>
+                    <!-- Select contains the keyword multiple to identify multiple selections-->
+                    <select name="suspects" id="suspects" multiple>
+                        <option value="suspect1">Dr. Finchley Nightingale</option>
+                        <option value="suspect2">Nigel Rochdale</option>
+                        <option value="suspect3">Matilda Harper</option>
+                        <option value="suspect4">Audi</option>
+                    </select>
+                    <br>
+            <input id="guessChoice" type="submit" value="Click Here For Your final Guess" onclick="checkGuess();">
+            </form>
     </section>
+
   </body>
 </html>
