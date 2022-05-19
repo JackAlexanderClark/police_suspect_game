@@ -4,12 +4,13 @@ let attempts = 0;
 // One guess gameloop
 document.getElementById("guessChoice").onclick = checkGuess();
 
+//Primary checking 
 function checkGuess() {
   let playerGuess = guess.value;
   if (attempts === 3) {
     feedback.textContent = "Game over! Failed. You have used all 3 guesses!";
+    console.log("GAME FAILED 3 GUESSES USED");
     //Need to restart the game using the restartGame() function
-
     return; 
   }
   if (playerGuess === suspect8) {
@@ -22,16 +23,15 @@ function checkGuess() {
     console.log("INCORRECT ANSWER");
 };
 
+//Resets the game attempts to 3
 function restartGame() {
-  //
+  attempts = 3;
+  feedback.textContent = "Game reset you have 3 more guesses to identify the suspect";
 }
 
 function incorrectGuess() {
-  //-1 from 3 guesses
 }
 
-//Incrementing wrong answer score
-let wrongAnswer = myGuess != correctSuspect;
 document.getElementsByClassName("wrongAnswerBox").addClass("incrementWrongScore");
 
 submitGuess.addEventListener('click', checkGuess);
