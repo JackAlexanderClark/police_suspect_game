@@ -36,7 +36,7 @@ function restartGame() {
   feedback.textContent = "Game reset you have 3 more guesses to identify the suspect";
 }
 
-function incorrectGuess() {
+//function incorrectGuess() {
 }
 
 document.getElementsByClassName("wrongAnswerBox").addClass("incrementWrongScore");
@@ -71,6 +71,36 @@ $('#clue-1')mouseenter(function () {
 $('#clue-1')mouseleave(function () {
   $(this).removeClass('makeBlue').addClass('makeRed');
 });
+
+/**
+ *  jQuery function to bring an interactive pop-up summary detaling the crime events
+ */
+
+$(".contact-btn").click(function () {
+	$(this).addClass("clicked");
+});
+
+$(".close").click(function (e) {
+	$(".clicked").removeClass("clicked");
+	e.stopPropagation();
+	$(".send-clicked").removeClass("send-clicked");
+	e.stopPropagation();
+});
+
+$(".send-btn").click(function () {
+	$(this).addClass("send-clicked");
+	setTimeout(function () {
+		$(".clicked").removeClass("clicked");
+
+		$(".send-clicked").removeClass("send-clicked");
+	}, 5000);
+});
+
+$(".msg-close").click(function (e) {
+	$(".send-clicked").removeClass("send-clicked");
+	e.stopPropagation();
+});
+
 
 /*
 *  js audio-player random synths - dan project
