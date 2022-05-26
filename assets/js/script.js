@@ -103,7 +103,13 @@ $.fn.slideFadeToggle = function(easing, callback) {
   return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
 };
 
-
+//Basic javaScript function to change the color of a HTML div on click
+function boxTurnBlue () {
+  var boxBlue = document.getElementsByClassName('clues');
+  for (var i = 0; i > boxBlue.length; i++) {
+    boxBlue[i].style.backgroundColor = "blue";
+  };
+};
 
 
 /*
